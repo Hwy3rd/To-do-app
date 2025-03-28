@@ -31,13 +31,14 @@ export default function App() {
 
   const handleSubmit = () => {
     const setJob = {
-      title: currentJob.title || "Untitled",
-      description: currentJob.description || "No description",
+      title: currentJob.title?.trim() || "Untitled",
+      description: currentJob.description?.trim() || "No description",
     };
 
     if (currentJob.id !== undefined) {
       // update current job
       setJob.id = currentJob.id;
+      setJob.publishTime = currentJob.publishTime;
       setJobList((prev) =>
         prev.map((job) => (job.id === currentJob.id ? setJob : job))
       );

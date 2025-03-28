@@ -14,8 +14,8 @@ export default function ToDoBox(props) {
     props.handleDelete(props.id);
   };
 
-  const titleLimited = limitCharacters(props.title, 20);
-  const descriptionLimited = limitCharacters(props.description, 60);
+  const titleLimited = limitCharacters(props.title, 23);
+  const descriptionLimited = limitCharacters(props.description, 55);
 
   return (
     <div className="to-do-box">

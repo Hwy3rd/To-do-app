@@ -6,50 +6,50 @@
   height: 130px;
   border-radius: 10px;
   color: black;
-  margin: 0 0 10px 0;
-  padding-left: 10px; /* Thêm lề bên trái để text lùi vào */
-  box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước box */
+  margin-bottom: 10px;
+  padding: 8px 10px; /* Reduced top padding */
   position: relative;
 }
 
-.text {
+.to-do-box .text {
   margin: 5px 0;
-  display: block;
   width: 100%;
 }
 
-#title {
+.to-do-box #title {
   font-size: 2em;
+  margin-top: 0; /* Remove top margin */
   margin-bottom: 3px;
 }
 
-#description {
+.to-do-box #description {
   font-size: 1em;
   margin-bottom: 3px;
 }
 
-#publishTime {
+.to-do-box #publishTime {
   font-size: 0.8em;
   color: #00000080;
   margin-top: auto;
   text-align: left;
 }
 
-#delete-btn {
-  position: absolute; /* Định vị tuyệt đối */
+.to-do-box #delete-btn {
+  position: absolute;
   width: 20px;
   height: 20px;
-  right: 10px; /* Cách lề phải 10px */
-  top: 10px; /* Cách lề trên 10px */
+  right: 10px;
+  top: 10px;
   background-color: rgba(138, 119, 51, 0.834);
-  color: rgb(255, 255, 255);
-  border: none; /* Bỏ viền */
-  border-radius: 50%; /* Làm tròn nút */
-  cursor: pointer; /* Con trỏ kiểu pointer khi di chuột vào */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#delete-btn:hover {
-  background-color: rgba(245, 134, 31, 0.2); /* Màu nền khi hover */
+
+.to-do-box #delete-btn:hover {
+  background-color: rgba(245, 134, 31, 0.5);
 }
