@@ -41,8 +41,8 @@
   height: 20px;
   right: 10px; /* Cách lề phải 10px */
   top: 10px; /* Cách lề trên 10px */
-  background-color: rgba(252, 249, 89, 0.621);
-  color: rgba(253, 153, 59, 0.788);
+  background-color: rgba(138, 119, 51, 0.834);
+  color: rgb(255, 255, 255);
   border: none; /* Bỏ viền */
   border-radius: 50%; /* Làm tròn nút */
   cursor: pointer; /* Con trỏ kiểu pointer khi di chuột vào */

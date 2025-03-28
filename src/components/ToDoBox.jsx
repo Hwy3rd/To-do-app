@@ -1,10 +1,21 @@
 import "../assets/ToDoBox.css";
 
+const limitCharacters = (text, charLimit) => {
+  if (!text) return "";
+  if (text.length <= charLimit) {
+    return text;
+  }
+  return text.substring(0, charLimit) + "...";
+};
+
 export default function ToDoBox(props) {
   const onDeleteClick = (e) => {
     e.stopPropagation();
     props.handleDelete(props.id);
   };
+
+  const titleLimited = limitCharacters(props.title, 20);
+  const descriptionLimited = limitCharacters(props.description, 60);
 
   return (
     <div className="to-do-box">
@@ -12,10 +23,10 @@ export default function ToDoBox(props) {
         X
       </button>
       <h3 id="title" className="text">
-        {props.title}
+        {titleLimited}
       </h3>
       <p id="description" className="text">
-        {props.description}
+        {descriptionLimited}
       </p>
       <p id="publishTime" className="text">
         Created: {props.publishTime}
