@@ -24,7 +24,7 @@ export default function App() {
     localStorage.setItem("jobList", JSON.stringify(jobList));
   }, [jobList]);
 
-  const handleClick = (job = {}) => {
+  const handleClick = (job = { title: "", description: "" }) => {
     setCurrentJob(job);
     setShowModal(true);
   };
