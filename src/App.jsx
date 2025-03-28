@@ -19,6 +19,7 @@ export default function App() {
   );
   const [showModal, setShowModal] = useState(false);
   const [currentJob, setCurrentJob] = useState({});
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     localStorage.setItem("jobList", JSON.stringify(jobList));
@@ -103,6 +104,10 @@ export default function App() {
               setCurrentJob({ ...currentJob, description: e.target.value })
             }
           ></textarea>
+          <input
+            value={inputValue || ""}
+            onChange={(e) => setInputValue(e.target.value)}
+          />
           <button className="submit-btn btn" onClick={handleSubmit}>
             Submit
           </button>
